@@ -15,7 +15,7 @@ function solution(map) {
     const [curY, curX, move] = queue.shift(); //큐의 첫번째 값 제거
     if (curX === goalX && curY === goalY) return move;
       
-    else {
+    
     for (let i = 0; i < 4; i++) {
       const nx = curX + dx[i];
       const ny = curY + dy[i];
@@ -24,7 +24,7 @@ function solution(map) {
         queue.push([ny, nx, move + 1]);
         map[ny][nx] = 0; // 다시 돌아갈 수 없다.
       }
-    }
+    
     }
   }
 
