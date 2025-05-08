@@ -12,9 +12,9 @@ for(i=0; i<N; i++){
     dictionary.set(stdin[i] , stdin[i].length)
 }
 
-let sortDictionary = new Map([...dictionary].sort().sort((a,b) => a[1] - b[1]))
-sortDictionary = [...sortDictionary.keys()]
+let sortDictionary = [...dictionary].sort().sort((a,b) => a[1] - b[1])
+
+sortDictionary = sortDictionary.map(array => array[0])
 
 console.log(sortDictionary.join('\n'))
-
 
